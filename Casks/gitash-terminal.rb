@@ -1,6 +1,6 @@
 cask "gitash-terminal" do
   version "0.1.0"
-  sha256 "f8ddcb4e4c1685449d9c1bdc6aa36c2a209c71de32db7a744568975b4c273439"
+  sha256 "15a3e9b8af9aabfae023805c5ff3c201f60d0693dd2d4351f8b62f18361ed490"
 
   url "https://github.com/Gitarackur/homebrew-tap/releases/download/gitash-terminal-v#{version}/Gitash-Terminal-macos-aarch64.dmg"
   name "Gitash Terminal"
