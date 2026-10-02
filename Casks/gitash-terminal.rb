@@ -5,7 +5,7 @@ cask "gitash-terminal" do
   url "https://github.com/Gitarackur/homebrew-tap/releases/download/gitash-terminal-v#{version}/Gitash-Terminal-macos-aarch64.dmg"
   name "Gitash Terminal"
   desc "Native graphical terminal built for the Gitash shell"
-  homepage "https://github.com/Gitarackur/void-zero"
+  homepage "https://github.com/Gitarackur/homebrew-tap"
 
   depends_on arch: :arm64
   depends_on :macos
