@@ -1,6 +1,6 @@
 cask "splice" do
   version "0.1.0"
-  sha256 "42243f18cfdae4d8841c28e2fe9c0dd69bd683219f811ccb86db1a0677f5295e"
+  sha256 "96e266b1fedd0aa4879354ef37ee7bcf355ee13786e560eb95c87784c292613b"
 
   url "https://github.com/Gitarackur/homebrew-tap/releases/download/splice-v#{version}/Splice-macos-aarch64.dmg"
   name "Splice"
