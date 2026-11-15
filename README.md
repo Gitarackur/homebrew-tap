@@ -1,6 +1,16 @@
 # Gitarackur Homebrew Tap
 
-Homebrew packages for Gitarackur applications and tools.
+Homebrew packages for Gitarackur applications and tools. All current casks
+require macOS on Apple Silicon; Intel Macs are unsupported.
+
+| Cask | Application |
+| --- | --- |
+| `bytecamp` | Interactive low-level systems bootcamp |
+| `clipse` | Private, local-first MP4 clip editor |
+| `gitash-terminal` | Native graphical terminal for the Gitash shell |
+| `splice` | Private, lossless MP3 cutter |
+
+Run `brew tap Gitarackur/tap` once. Trust each cask once before installing it.
 
 ## Clipse
 
@@ -62,4 +72,50 @@ Gitash Terminal is currently unsigned. If macOS blocks the first launch, run:
 
 ```bash
 xattr -dr com.apple.quarantine "/Applications/Gitash Terminal.app"
+```
+
+## Bytecamp
+
+Install on an Apple Silicon Mac:
+
+```bash
+brew tap Gitarackur/tap
+brew trust --cask gitarackur/tap/bytecamp
+brew install --cask gitarackur/tap/bytecamp
+```
+
+Upgrade or uninstall:
+
+```bash
+brew upgrade --cask gitarackur/tap/bytecamp
+brew uninstall --cask bytecamp
+```
+
+Bytecamp is currently unsigned. If macOS blocks the first launch, run:
+
+```bash
+xattr -dr com.apple.quarantine "/Applications/Bytecamp.app"
+```
+
+## Splice
+
+Install on an Apple Silicon Mac:
+
+```bash
+brew tap Gitarackur/tap
+brew trust --cask gitarackur/tap/splice
+brew install --cask gitarackur/tap/splice
+```
+
+Upgrade or uninstall:
+
+```bash
+brew upgrade --cask gitarackur/tap/splice
+brew uninstall --cask splice
+```
+
+Splice is currently unsigned. If macOS blocks the first launch, run:
+
+```bash
+xattr -dr com.apple.quarantine "/Applications/Splice.app"
 ```
