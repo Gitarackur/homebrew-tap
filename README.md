@@ -131,11 +131,12 @@ xattr -dr com.apple.quarantine "/Applications/Splice.app"
 ## Repaired macOS installers
 
 The republished 0.1.0 installers contain repaired bundle signatures; Clipse also
-includes its app icon. To replace an older installation:
+includes its app icon. The app versions are unchanged, so existing installations
+need a reinstall to receive these packaging fixes. To reinstall all four apps:
 
 ```bash
 brew update
-brew reinstall --cask gitarackur/tap/clipse gitarackur/tap/bytecamp gitarackur/tap/splice gitarackur/tap/gitash-terminal
+brew reinstall --cask gitarackur/tap/{clipse,bytecamp,splice,gitash-terminal}
 ```
 
 To reinstall a specific app, use `brew reinstall --cask gitarackur/tap/clipse`
