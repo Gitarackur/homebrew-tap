@@ -2,6 +2,29 @@
 
 Homebrew packages for Gitarackur applications and tools.
 
+## Clipse
+
+Install on an Apple Silicon Mac:
+
+```bash
+brew tap Gitarackur/tap
+brew trust --cask gitarackur/tap/clipse
+brew install --cask gitarackur/tap/clipse
+```
+
+To upgrade or uninstall Clipse:
+
+```bash
+brew upgrade --cask gitarackur/tap/clipse
+brew uninstall --cask clipse
+```
+
+Clipse is currently unsigned. If macOS blocks the first launch, run:
+
+```bash
+xattr -dr com.apple.quarantine "/Applications/Clipse.app"
+```
+
 ## Gitash Terminal
 
 Install on an Apple Silicon Mac:
