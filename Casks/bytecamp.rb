@@ -1,6 +1,6 @@
 cask "bytecamp" do
-  version "0.1.0"
-  sha256 "ef732817ccd945da8c08d9f57c89ff1c0833edc3392be934520958f8a6d82e42"
+  version "0.1.1"
+  sha256 "9946e327cc88a27b4baffacc80167de08c0f7204b84a7109ad9a811d363bb082"
 
   url "https://github.com/Gitarackur/homebrew-tap/releases/download/bytecamp-v#{version}/Bytecamp-macos-aarch64.dmg"
   name "Bytecamp"

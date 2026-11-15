@@ -1,6 +1,6 @@
 cask "clipse" do
-  version "0.1.0"
-  sha256 "7e360ede4d18990e35dcd6f34c7252f7f432aedff2e26f3204cf5e6b8934c8b1"
+  version "0.1.1"
+  sha256 "4b49241a6eb9371d43740292c28b2c1a652d7b7727e487395a40445b0b7b2d32"
 
   url "https://github.com/Gitarackur/homebrew-tap/releases/download/clipse-v#{version}/Clipse-macos-aarch64.dmg"
   name "Clipse"
