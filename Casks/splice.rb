@@ -1,6 +1,6 @@
 cask "splice" do
   version "0.1.0"
-  sha256 "62901767eeda4c0adf806cd7b2bb3794f3f536f37532cd6e213c120c9aeba1d1"
+  sha256 "a2e426c345c8cf975db8d607cd287cc3b1e78764b79488636e0670d887df4f02"
 
   url "https://github.com/Gitarackur/homebrew-tap/releases/download/splice-v#{version}/Splice-macos-aarch64.dmg"
   name "Splice"
@@ -13,7 +13,9 @@ cask "splice" do
   app "Splice.app"
 
   caveats <<~EOS
-    Splice is not code-signed. If macOS blocks the first launch, run:
+    Splice is ad hoc signed, without Apple Developer ID signing or notarization.
+    After trying to open the app, use System Settings > Privacy & Security > Open Anyway.
+    If macOS does not offer the override, remove quarantine from this app only:
       xattr -dr com.apple.quarantine "#{appdir}/Splice.app"
   EOS
 end

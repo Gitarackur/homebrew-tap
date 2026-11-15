@@ -29,7 +29,9 @@ brew upgrade --cask gitarackur/tap/clipse
 brew uninstall --cask clipse
 ```
 
-Clipse is currently unsigned. If macOS blocks the first launch, run:
+Clipse is ad hoc signed, without Apple Developer ID signing or notarization.
+After trying to open it, use **System Settings → Privacy & Security → Open Anyway**.
+If that override is unavailable, remove quarantine from this app only:
 
 ```bash
 xattr -dr com.apple.quarantine "/Applications/Clipse.app"
@@ -68,7 +70,9 @@ To also remove the Gitarackur tap from Homebrew:
 brew untap Gitarackur/tap
 ```
 
-Gitash Terminal is currently unsigned. If macOS blocks the first launch, run:
+Gitash Terminal is ad hoc signed, without Apple Developer ID signing or notarization.
+After trying to open it, use **System Settings → Privacy & Security → Open Anyway**.
+If that override is unavailable, remove quarantine from this app only:
 
 ```bash
 xattr -dr com.apple.quarantine "/Applications/Gitash Terminal.app"
@@ -91,7 +95,9 @@ brew upgrade --cask gitarackur/tap/bytecamp
 brew uninstall --cask bytecamp
 ```
 
-Bytecamp is currently unsigned. If macOS blocks the first launch, run:
+Bytecamp is ad hoc signed, without Apple Developer ID signing or notarization.
+After trying to open it, use **System Settings → Privacy & Security → Open Anyway**.
+If that override is unavailable, remove quarantine from this app only:
 
 ```bash
 xattr -dr com.apple.quarantine "/Applications/Bytecamp.app"
@@ -114,8 +120,23 @@ brew upgrade --cask gitarackur/tap/splice
 brew uninstall --cask splice
 ```
 
-Splice is currently unsigned. If macOS blocks the first launch, run:
+Splice is ad hoc signed, without Apple Developer ID signing or notarization.
+After trying to open it, use **System Settings → Privacy & Security → Open Anyway**.
+If that override is unavailable, remove quarantine from this app only:
 
 ```bash
 xattr -dr com.apple.quarantine "/Applications/Splice.app"
 ```
+
+## Repaired macOS installers
+
+The republished 0.1.0 installers contain repaired bundle signatures; Clipse also
+includes its app icon. To replace an older installation:
+
+```bash
+brew update
+brew reinstall --cask gitarackur/tap/clipse gitarackur/tap/bytecamp gitarackur/tap/splice gitarackur/tap/gitash-terminal
+```
+
+To reinstall a specific app, use `brew reinstall --cask gitarackur/tap/clipse`
+(or replace `clipse` with `bytecamp`, `splice`, or `gitash-terminal`).

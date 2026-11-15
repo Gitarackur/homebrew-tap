@@ -1,6 +1,6 @@
 cask "clipse" do
   version "0.1.0"
-  sha256 "ac4fa5f262e45fd4994ff1b2f886e64bdf62725c11923ddcb8130aebc08394f0"
+  sha256 "7e360ede4d18990e35dcd6f34c7252f7f432aedff2e26f3204cf5e6b8934c8b1"
 
   url "https://github.com/Gitarackur/homebrew-tap/releases/download/clipse-v#{version}/Clipse-macos-aarch64.dmg"
   name "Clipse"
@@ -13,7 +13,9 @@ cask "clipse" do
   app "Clipse.app"
 
   caveats <<~EOS
-    Clipse is not code-signed. If macOS blocks the first launch, run:
+    Clipse is ad hoc signed, without Apple Developer ID signing or notarization.
+    After trying to open the app, use System Settings > Privacy & Security > Open Anyway.
+    If macOS does not offer the override, remove quarantine from this app only:
       xattr -dr com.apple.quarantine "#{appdir}/Clipse.app"
   EOS
 end
