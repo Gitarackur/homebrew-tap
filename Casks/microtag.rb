@@ -5,7 +5,11 @@ cask "microtag" do
   url "https://github.com/Gitarackur/homebrew-tap/releases/download/microtag-v#{version}/Microtag-macos-aarch64.dmg"
   name "Microtag"
   desc "Local image and microscopy metadata explorer"
-  homepage "https://github.com/Gitarackur/void-zero/tree/main/zig/microtag"
+  homepage "https://void-zero.pages.dev/microtag/"
+
+  livecheck do
+    skip "Microtag uses app-specific release tags in a multi-application repository"
+  end
 
   depends_on arch: :arm64
   depends_on :macos
