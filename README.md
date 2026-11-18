@@ -8,7 +8,7 @@ require macOS on Apple Silicon; Intel Macs are unsupported.
 | Bytecamp | `bytecamp` | [Launch](https://void-zero.pages.dev/bytecamp/) |
 | Clipse | `clipse` | [Launch](https://void-zero.pages.dev/mp4-cutter/) |
 | Gitash Terminal | `gitash-terminal` | Native only |
-| Microtag | Not yet published | [Launch](https://void-zero.pages.dev/microtag/) |
+| Microtag | `microtag` | [Launch](https://void-zero.pages.dev/microtag/) |
 | Splice | `splice` | [Launch](https://void-zero.pages.dev/splice/) |
 
 Run `brew tap Gitarackur/tap` once. Trust each cask once before installing it.
@@ -160,8 +160,28 @@ EXIF, microscopy, and scientific metadata locally in the browser. Its Zig and
 WebAssembly engine runs on the device, and the installed PWA can work offline
 after its assets have been cached.
 
-Microtag is not yet available as a cask in this tap. Native installation
-instructions will be added here when `Casks/microtag.rb` is published.
+Install the native app on an Apple Silicon Mac:
+
+```bash
+brew tap Gitarackur/tap
+brew trust --cask gitarackur/tap/microtag
+brew install --cask gitarackur/tap/microtag
+```
+
+Upgrade or uninstall:
+
+```bash
+brew upgrade --cask gitarackur/tap/microtag
+brew uninstall --cask microtag
+```
+
+Microtag is ad hoc signed, without Apple Developer ID signing or notarization.
+After trying to open it, use **System Settings → Privacy & Security → Open Anyway**.
+If that override is unavailable, remove quarantine from this app only:
+
+```bash
+xattr -dr com.apple.quarantine "/Applications/Microtag.app"
+```
 
 ## Repaired macOS installers
 
