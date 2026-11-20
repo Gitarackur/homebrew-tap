@@ -8,6 +8,7 @@ require macOS on Apple Silicon; Intel Macs are unsupported.
 | Bytecamp | `bytecamp` | [Launch](https://void-zero.pages.dev/bytecamp/) |
 | Clipse | `clipse` | [Launch](https://void-zero.pages.dev/mp4-cutter/) |
 | Gitash Terminal | `gitash-terminal` | Native only |
+| Icarus | `icarus` | Native only |
 | Microtag | `microtag` | [Launch](https://void-zero.pages.dev/microtag/) |
 | Splice | `splice` | [Launch](https://void-zero.pages.dev/splice/) |
 
@@ -95,6 +96,31 @@ If that override is unavailable, remove quarantine from this app only:
 
 ```bash
 xattr -dr com.apple.quarantine "/Applications/Gitash Terminal.app"
+```
+
+## Icarus
+
+Install on an Apple Silicon Mac:
+
+```bash
+brew tap Gitarackur/tap
+brew trust --cask gitarackur/tap/icarus
+brew install --cask gitarackur/tap/icarus
+```
+
+Upgrade or uninstall:
+
+```bash
+brew upgrade --cask gitarackur/tap/icarus
+brew uninstall --cask icarus
+```
+
+Icarus has a valid ad hoc bundle signature but is not notarized by Apple.
+After trying to open it, use **System Settings > Privacy & Security > Open Anyway**.
+If that override is unavailable, remove quarantine from this app only:
+
+```bash
+xattr -dr com.apple.quarantine "/Applications/Icarus.app"
 ```
 
 ## Bytecamp
