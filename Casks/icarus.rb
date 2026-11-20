@@ -1,6 +1,6 @@
 cask "icarus" do
-  version "0.0.165"
-  sha256 "3092247258ee4ee53dea00e35a5f06e536f07c9fc8ffba39aa68a26ce3918ea4"
+  version "0.0.166"
+  sha256 "2b4484a0d34becefd890b6df8030997449c3f9b0da265967ca0325fa57da85c1"
 
   url "https://github.com/Gitarackur/MISSION-ICARUS/releases/download/v#{version}/Icarus-Mac-#{version}-Installer.dmg"
   name "Icarus"
